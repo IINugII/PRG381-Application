@@ -7,8 +7,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Author     : kgsmi
 */
 
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     background: #f5f7fa;
@@ -64,11 +62,11 @@ input[type="reset"] {
 }
 
 input[type="reset"] {
-    background-color: #f44336;
+    background-color: #D22630;
 }
 
 input[type="reset"]:hover {
-    background-color: #c82333;
+    opacity: 0.9;
 }
 
 input[type="submit"]:hover{

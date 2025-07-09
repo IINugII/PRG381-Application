@@ -1,0 +1,203 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 09 Jul 2025, 14:19:53
+    Author     : kgsmi
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.div1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.div1 a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 18px;
+    background: linear-gradient(to left, #D22630, #FCD116);
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.div1 a:hover {
+    background: linear-gradient(to right, #D22630, #FCD116);
+    color: white
+}
+
+.div2 {
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 1;
+    background: linear-gradient(to right, #D22630, #FCD116);
+    color: black;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+}
+
+.div2 h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.div2 h2 {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: black;
+}
+
+.div3 {
+    grid-column-start: 6;
+    grid-row: 1 / span 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.div3 img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.div4 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-left: 6px solid #D22630;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px grey;
+}
+
+.div4 p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.div5 {
+    grid-column: 5 / span 2;
+    grid-row: 2 / span 3;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px grey;
+}
+
+.div5 h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.div5 li {
+    margin-top: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.div6 {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 2;
+    background-color: #fdfdff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px grey;
+}
+
+.div6 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.counselor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.counselor-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 6px grey;
+    transition: transform 0.2s ease;
+}
+
+.counselor-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.counselor-card h3 {
+    margin: 10px 0 6px;
+    font-size: 1.1em;
+    color: #222;
+}
+
+.counselor-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Footer */
+.div7 {
+    grid-column: 1 / span 6;
+    grid-row: 6 / span 1;
+    background: linear-gradient(to left, #D22630, #FCD116);
+    color: black;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.div7 h2 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: black;
+}
+
+.contact-details p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    color: black;
+}
+
+.contact-details a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
