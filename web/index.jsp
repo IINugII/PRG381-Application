@@ -27,7 +27,7 @@
             </div>
             
             <div class="div3">
-                <a href="https://www.belgiumcampus.ac.za/" target="_blank"><img src="https://careerday.belgiumcampus.ac.za/sites/s576358/BelgiumCampus.jpg" alt="Belgium Campus Logo"></a>
+                <a href="https://www.belgiumcampus.ac.za/" target="_blank"><img src="https://tse3.mm.bing.net/th/id/OIP.yORKhI_AtayeR_Id0lQ6gwAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Belgium Campus Logo"></a>
             </div>
             
             <div class="div4">
