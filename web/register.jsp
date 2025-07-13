@@ -14,9 +14,16 @@
     </head>
     <body>
         <h1>Welcome to the Registration Page</h1>
-        
-        <form name="login" action="login.jsp" method="POST">
-            
+
+        <form action="register" method="post">
+            <% if (request.getAttribute("error") != null) {%>
+            <div style="color:red;"><%= request.getAttribute("error")%></div>
+            <% } %>
+            <% if (request.getAttribute("message") != null) {%>
+            <div style="color:green;"><%= request.getAttribute("message")%></div>
+            <% }%>
+
+
             <table border="1">
                 <tbody>
                     <tr>
@@ -49,11 +56,11 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <input type="submit" value="Submit" name="btnSubmit" />
             <input type="reset" value="Clear" name="btnClear" />
-            
+
         </form>
-        
+
     </body>
 </html>
