@@ -3,5 +3,6 @@ build/
 
 nbproject/private/
 nb-configuration.xml
+src/db.properties
 
 target/
