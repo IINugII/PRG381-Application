@@ -15,7 +15,7 @@
     <body>
         <h1>Welcome to the Login Page</h1>
         
-        <form name="dashboard" action="dashboard.jsp" method="POST">
+        <form name="login" action="login" method="POST">
             
             <table border="1">
                 <tbody>
@@ -33,7 +33,7 @@
                     </tr>
                 </tbody>
             </table>
-            
+            <p style="color:red">${errorMessage}</p>
             <input type="submit" value="Submit" name="btnSubmit" />
             <input type="reset" value="Clear" name="btnClear" />
             
