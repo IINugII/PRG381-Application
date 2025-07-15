@@ -18,7 +18,7 @@
             <div class="div1">
                 <div class="header-content">
                     <h1>Welcome Student</h1>
-                    <form action="index.jsp" method="POST">
+                    <form action="logout" method="get">
                         <button class="logout-btn" type="submit">Logout</button>
                     </form>
                 </div>

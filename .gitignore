@@ -6,3 +6,5 @@ nb-configuration.xml
 src/db.properties
 
 target/
+
+src/<default package>/db.properties

@@ -18,7 +18,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.regex.Pattern;
 
-@WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
     // regex patterns
 
@@ -74,7 +73,7 @@ public class RegisterServlet extends HttpServlet {
 
             // b) insert
             PreparedStatement ins = conn.prepareStatement(
-                    "INSERT INTO users(student_number,name,surname,email,phone,password_hash) VALUES(?,?,?,?,?,?)");
+                    "INSERT INTO users(student_number,name,surname,email,phone,password) VALUES(?,?,?,?,?,?)");
             ins.setString(1, studentNum);
             ins.setString(2, firstName);
             ins.setString(3, lastName);
