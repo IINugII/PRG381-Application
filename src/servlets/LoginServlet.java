@@ -10,6 +10,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+
+/**
+ * Handles POST requests to "/login". Verifies user credentials
+ * and establishes an HTTP session on success.
+ */
 public class LoginServlet extends HttpServlet {
 
     /**
@@ -32,7 +37,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        // Extract username, email and password from the submitted form
         String studentNumber = request.getParameter("txtStudentNumberLogin");
         String email = request.getParameter("txtEmailLogin");
         String password = request.getParameter("txtPasswordLogin");
@@ -55,10 +60,12 @@ public class LoginServlet extends HttpServlet {
         }
 
         if (valid) {
+            // Credentials matched: create a new session (or reuse existing)
             HttpSession session = request.getSession();
             session.setAttribute("studentNumber", studentNumber);
             response.sendRedirect("dashboard.jsp");
         } else {
+            // No matching user: set error message and forward back to login page
             request.setAttribute("errorMessage", "Invalid student number or password.");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
