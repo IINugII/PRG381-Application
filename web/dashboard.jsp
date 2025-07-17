@@ -17,7 +17,7 @@
             
             <div class="div1">
                 <div class="header-content">
-                    <h1>Welcome Student</h1>
+                    <h1>Welcome ${sessionScope.studentName}</h1>
                     <form action="logout" method="get">
                         <button class="logout-btn" type="submit">Logout</button>
                     </form>
@@ -26,10 +26,10 @@
 
             <div class="div2">
                 <h2>Student Info</h2>
-                <p><strong>Name:</strong> Student Name</p>
-                <p><strong>Student Number:</strong> Student Number</p>
-                <p><strong>Email:</strong> Student Email</p>
-                <p><strong>Phone Number:</strong> Student Phone Number</p>
+                <p><strong>Name:</strong> ${sessionScope.studentName}</p>
+                <p><strong>Student Number:</strong> ${sessionScope.studentNumber}</p>
+                <p><strong>Email:</strong>  ${sessionScope.studentEmail}</p>
+                <p><strong>Phone Number:</strong> ${sessionScope.studentPhone}</p>
             </div>
 
             <div class="div3">

@@ -60,15 +60,38 @@ public class LoginServlet extends HttpServlet {
         }
 
         if (valid) {
-            // Credentials matched: create a new session (or reuse existing)
+          // Credentials matched: now fetch name & phone before creating session
+            String name  = "Unknown";
+            String phone = "Unknown";
+            try (Connection conn2 = DBConnection.getConnection()) {
+                String infoSql = 
+                  "SELECT name, phone FROM users WHERE student_number = ?";
+                PreparedStatement infoStmt = conn2.prepareStatement(infoSql);
+                infoStmt.setString(1, studentNumber);
+                ResultSet infoRs = infoStmt.executeQuery();
+                if (infoRs.next()) {
+                    name  = infoRs.getString("name");
+                    phone = infoRs.getString("phone");
+                }
+            } catch (Exception e) {
+                // log if you like
+            }
+
             HttpSession session = request.getSession();
             session.setAttribute("studentNumber", studentNumber);
+            session.setAttribute("studentEmail",   email);
+            // **newly added** attributes
+            session.setAttribute("studentName",    name);
+            session.setAttribute("studentPhone",   phone);
+
             response.sendRedirect("dashboard.jsp");
         } else {
             // No matching user: set error message and forward back to login page
             request.setAttribute("errorMessage", "Invalid student number or password.");
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
+        }
     }
 
-}
+
+    
